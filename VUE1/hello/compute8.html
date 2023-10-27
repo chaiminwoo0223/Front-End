@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <script src="https://unpkg.com/vue@next"></script>
+  <style>
+    div#app { margin: 20px auto; padding: 20px; width: 300px;
+          border: 1px solid gray; box-shadow: 5px 5px 5px #aaa; }
+    p { font-size: 15pt; color: blue; }
+    button { padding: 0.4em 3em; margin-right: 5px; }
+    div#hello { margin-top: 20px; padding: 20px;
+      background-color: lightGreen; border: 1px solid gray;
+      text-align: center; font-size: 20pt; }
+  </style>
+</head>
+<body>
+  <div id="app">
+      <h1>증감</h1>
+      <p>{{ number }}</p>
+      <hr />
+      <button type="button" v-on:click="increase">increase</button>
+      <button type="button" v-on:click="decrease">decrease</button>
+  </div>
+  <script type="text/javascript">
+    let app = {
+        data() {
+            return { number: 0 }; 
+        },
+        methods: {
+            increase() { this.number += 1; },
+            decrease() { this.number += -1; }
+      }
+    };
+    Vue.createApp(app).mount("#app");
+   </script>
+</body>
+</html>
