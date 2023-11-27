@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "title": "과제",
+      "done": false
+    },
+    {
+      "id": 2,
+      "title": "시험공부",
+      "done": true
+    },
+    {
+      "id": 3,
+      "title": "코딩훈련",
+      "done": false
+    },
+    {
+      "id": 4,
+      "title": "운동",
+      "done": true
+    }
+  ]
+}
