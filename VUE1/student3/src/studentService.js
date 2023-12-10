@@ -35,3 +35,11 @@ export async function insertStudent(student) {
     alert('저장 에러: ' + (error instanceof Error ? error.message : error));
   }
 }
+
+export async function deleteStudent(id) {
+  try {
+    await axios.delete("/students/" + id);
+  } catch (error) {
+    alert('삭제 에러: ' + (error instanceof Error ? error.message : error));
+  }
+}
